@@ -5,8 +5,8 @@ import StartFilled from "../assets/Star_fill.svg";
 const Card = ({ item }) => {
   const { name, popular, price, rating, votes, image, available } = item;
   return (
-    <div>
-      <div className="relative min-h-[22rem] min-w-80">
+    <div className="w-full">
+      <div className="relative w-full">
         <img
           className="w-full h-auto object-cover rounded-2xl"
           src={image}
@@ -19,7 +19,9 @@ const Card = ({ item }) => {
         )}
         <div className="mt-2">
           <div className="flex justify-between items-center p-1">
-            <h2 className="text-2xl font-semibold text-white">{name}</h2>
+            <h2 className="text-lg md:text-2xl font-semibold text-white">
+              {name}
+            </h2>
             <p className="text-base text-gray-dark font-bold rounded-lg py-0.5 px-3 bg-green-light">
               {price}
             </p>
